@@ -1,0 +1,22 @@
+(* Define the contract name *)
+(* File name: SimpleContract.scilla *)
+
+scilla_version 0
+
+import ListUtils
+import BoolUtils
+import IntUtils
+import MapUtils
+import OptionUtils
+import NatUtils
+
+(* Define the contract *)
+contract SimpleContract
+
+(* Define state variables *)
+field message: String = ""
+
+(* Transition to update the state variable *)
+transition UpdateMessage(new_message: String)
+    message := new_message;
+end
